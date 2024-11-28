@@ -1,5 +1,8 @@
 FROM python:3.9-slim
 
+# Set environment variables to disable Jupyter's token authentication
+ENV JUPYTER_TOKEN=''
+
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \
